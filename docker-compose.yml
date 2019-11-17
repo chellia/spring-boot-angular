@@ -1,0 +1,10 @@
+version: '2'
+services:
+  ui-nginx:
+    build: TechSkillsUI/.
+    ports:
+      - "80:80"
+    depends_on:
+      - api-rest
+  api-rest:
+    build: TechSkillsApi/.
